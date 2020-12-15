@@ -1,0 +1,22 @@
+Rr <- Requirements 
+Ar <- Acceptance requirements
+Ts <- Test scenario
+
+Rr-1: The application must convert RGB color codes to Hexadecimal.
+    Ar-1-1: Input color code must be RBG type.
+        Ts-1-1-1: 
+            entrySample is equal to RGB{11, 33, 243}
+            Test Result = PASS
+
+            entrySample := int{11, 33, 243}
+            Test Result = FAIL
+
+    Ar-1-2: Output color code must be HEX type.
+        Ts-1-2-1:
+            entrySample is equal to RGB{11, 33, 243}
+            reflect.TypeOf(entrySample.Rgb2Hex()).Name() is equal to HEX
+            Test Result = PASS
+
+            entrySample is equal to RGB{11, 33, 243}
+            reflect.TypeOf(entrySample.Rgb2Hex()).Name() is equal to RBG
+            Test Result = FAIL
